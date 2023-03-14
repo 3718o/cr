@@ -1,2 +1,1 @@
-# Room
-A simple website, a public chatroom server. This fork of the chatroom is ment so you can observe and chat, without the worries of having to display or type a name. This way you're not tempted to say put a name or cause conflict with other users.
+# Room A simple chatroom server fork, I made this for my own personal use and to see if I can make a better looking website than the original from what I can remember, to this day I have not found the FIRST version, all I know is that I had the code saved in a .txt file for god know's what.
