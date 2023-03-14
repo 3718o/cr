@@ -18,7 +18,7 @@
       <header class="mb-auto">
         <div class="float-md-start fw-bold fs-5">Website #3718</div>
         <nav class="nav justify-content-center float-md-end"><a class="nav-link" </a>
-            <div class="nav-link">
+            <div clasx x ds="nav-link">
               <div class="form-check form-switch"><input type="checkbox" class="form-check-input" id="darkSwitch"><label
                   class="custom-control-label" for="darkSwitch">Dark Mode</label></div>
               <script src="dark-mode-switch.min.js"></script>
@@ -47,13 +47,14 @@
 
           <div id="web_chat"></div>
           <div>
-            <left>
 
-             <br> <textarea id="text" placeholder="Content of Message"></textarea> <br>
-              <input type="text"id="name" placeholder="Username">
-              <input type="button" onclick="send();" value="                S E N D                " </div>
-            </left>
+
+            <br> <textarea id="text" cols="21" placeholder="Message"></textarea> <br>
+            <input type="text" id="name" placeholder="Username" maxlength="8" size="18"> <br>
+            <input type="button" onclick="send();" value="S E N D" </div>
+
             <script type="text/javascript">
+
 
               $(document).ready(function () {
                 cometApi.start({node: "app.comet-server.ru", dev_id: 15})
