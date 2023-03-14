@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" class="h-100">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta property="og:site_name" content="">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css">
+      <script nomodule>
+         window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-ie11@5/css/bootstrap-ie11.min.css"><script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@4/ie11CustomProperties.min.js"><\/script>');
+      </script>
+      <link rel="stylesheet" href="dark-mode.css">
+   </head>
+   <body class="bg-white text-center d-flex h-100">
+      <div class="container d-flex p-3 mx-auto w-100 flex-column">
+         <header class="mb-auto">
+            <div class="float-md-start fw-bold fs-5">Website #3718</div>
+            <nav class="nav justify-content-center float-md-end"><a class="nav-link" </a>
+               <div class="nav-link">
+                  <div class="form-check form-switch"><input type="checkbox" class="form-check-input" id="darkSwitch"><label class="custom-control-label" for="darkSwitch">Dark Mode</label></div>
+                  <script src="dark-mode-switch.min.js"></script>
+               </div>
+            </nav>
+         </header>
+         <left>
+           <head> 
+    <meta charset=utf-8>
+    <script language="JavaScript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+    <script src="https://comet-server.com/CometServerApi.js" type="text/javascript"></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+           <left>
+    <style>
+    pre{
+        
+        padding: 5px;
+        
+    }
+    </style>
+  <font>
+<body>
+
+<div id="web_chat"></div>
+<div>
+  <left>
+    <br><textarea id="text"></textarea> <br> 
+ <input type="button" onclick="send();" value="                S E N D                " 
+   
+   </div>
+  </left>
+<script type="text/javascript">
+
+$(document).ready(function()
+{ 
+    cometApi.start({node:"app.comet-server.ru", dev_id:15 })
+    
+    cometApi.subscription("simplechat.newMessage", function(event){
+        $("#web_chat").append('<b>'+HtmlEncode(event.data.name)+'</b>')
+        $("#web_chat").append('<pre>'+HtmlEncode(event.data.text)+'</pre>')
+        $("#web_chat").append('<br>')
+    })
+})
+
+function HtmlEncode(s)
+{
+  var el = document.createElement("div");
+  el.innerText = el.textContent = s;
+  s = el.innerHTML;
+  return s;
+}
+function send()
+{
+   
+   var text = $('#text').val();
+   
+   $.ajax({
+        url: "https://comet-server.com/doc/CppComet/chat-example/chat.php",
+        type: "POST", 
+        data:"text="+encodeURIComponent(text)+"&name="+encodeURIComponent(name)
+   });
+}
+</script>
+         </footer>
+      </div>
+   </body>
