@@ -9,3 +9,5 @@ input[type=text] {
 .text {
     width: 10.5em;  height: 1.7em;
 }
+
+textarea { width: 10.5em;  }
