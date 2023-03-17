@@ -1,5 +1,5 @@
 input[type=button] {
-    width: 5.25em;  height: 1.7em;
+    width: 10.5em;  height: 1.7em;
 }
 
 input[type=text] {
@@ -7,7 +7,7 @@ input[type=text] {
 }
 
 input[type=reset] {
-    width: 5.25em;  height: 1.7em;
+    width: 10.5em;  height: 1.7em;
 }
 
 .text {
