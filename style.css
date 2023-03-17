@@ -1,13 +1,13 @@
 input[type=button] {
-    width: 10.5em;  height: 1.7em;
+    width: 21em;  height: 1.7em;
 }
 
 input[type=text] {
-    width: 10.5em;  height: 1.7em;
+    width: 21em;  height: 1.7em;
 }
 
 .text {
-    width: 10.5em;  height: 1.7em;
+    width: 21em;  height: 1.7em;
 }
 
-textarea { width: 10.5em;  }
+textarea { width: 21em;  }
