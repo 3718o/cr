@@ -49,10 +49,20 @@
           <div>
 
             <link rel="stylesheet" href="style.css">
-         
+
             <br> <textarea id="text" value="text" placeholder="Message"></textarea> <br>
             <input type="text" id="name" placeholder="Username" maxlength="16"> <br>
-            <input type="button" onclick="send();" value="S E N D" </div>
+            <input type="button" id="a" onclick="send();" value="S E N D" </div>
+            <script>
+              function searchKeyPress(e) {
+                e = e || window.event;
+                if (e.keyCode == 13) {
+                  document.getElementById('a').click();
+                  return false;
+                }
+                return true;
+              }
+            </script>
 
             <script type="text/javascript">
 
