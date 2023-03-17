@@ -50,50 +50,52 @@
 
             <link rel="stylesheet" href="style.css">
 
-            <br> <textarea id="text" value="text" placeholder="Message"></textarea> <br>
-            <input type="text" id="name" placeholder="Username" maxlength="16"> <br>
-            <input type="button" id="a" onclick="send();" value="S E N D" </div>
-            <script>
-              function searchKeyPress(e) {
-                e = e || window.event;
-                if (e.keyCode == 13) {
-                  document.getElementById('a').click();
-                  return false;
-                }
-                return true;
-              }
-            </script>
-
-            <script type="text/javascript">
-
-
-              $(document).ready(function () {
-                cometApi.start({node: "app.comet-server.ru", dev_id: 15})
-
-                cometApi.subscription("simplechat.newMessage", function (event) {
-                  $("#web_chat").append('<b>' + HtmlEncode(event.data.name) + '</b>')
-                  $("#web_chat").append('<pre>' + HtmlEncode(event.data.text) + '</pre>')
-                  $("#web_chat").append('<br>')
-                })
-              })
-
-              function HtmlEncode(s) {
-                var el = document.createElement("div");
-                el.innerText = el.textContent = s;
-                s = el.innerHTML;
-                return s;
-              }
-              function send() {
-                var name = $('#name').val();
-                var text = $('#text').val();
-
-                $.ajax({
-                  url: "https://comet-server.com/doc/CppComet/chat-example/chat.php",
-                  type: "POST",
-                  data: "text=" + encodeURIComponent(text) + "&name=" + encodeURIComponent(name)
-                });
-              }
-            </script>
-            </footer>
+            <br> <textarea id="text" tabindex="1" value="text" placeholder="Message"></textarea> <br>
+            <input type="text" tabindex="2" id="name" placeholder="Username" maxlength="16"> <br>
+            <input type="button" id="a" tabindex="3" accesskey=" " onclick="send();" value="S E N D">
           </div>
-        </body>
+
+          <script>
+            function searchKeyPress(e) {
+              e = e || window.event;
+              if (e.keyCode == 13) {
+                document.getElementById('a').click();
+                return false;
+              }
+              return true;
+            }
+          </script>
+
+          <script type="text/javascript">
+
+
+            $(document).ready(function () {
+              cometApi.start({node: "app.comet-server.ru", dev_id: 15})
+
+              cometApi.subscription("simplechat.newMessage", function (event) {
+                $("#web_chat").append('<b>' + HtmlEncode(event.data.name) + '</b>')
+                $("#web_chat").append('<pre>' + HtmlEncode(event.data.text) + '</pre>')
+                $("#web_chat").append('<br>')
+              })
+            })
+
+            function HtmlEncode(s) {
+              var el = document.createElement("div");
+              el.innerText = el.textContent = s;
+              s = el.innerHTML;
+              return s;
+            }
+            function send() {
+              var name = $('#name').val();
+              var text = $('#text').val();
+
+              $.ajax({
+                url: "https://comet-server.com/doc/CppComet/chat-example/chat.php",
+                type: "POST",
+                data: "text=" + encodeURIComponent(text) + "&name=" + encodeURIComponent(name)
+              });
+            }
+          </script>
+          </footer>
+    </div>
+  </body>
