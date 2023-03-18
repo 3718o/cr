@@ -1,17 +1,41 @@
+a {font-family: Roboto, "Montserrat", Arial;}
+
 input[type=button] {
     width: 10.5em;  height: 1.7em;
+    border-radius: 2.5px;
+    border: 2px solid #808080;
+  background: white;
 }
 
 input[type=text] {
     width: 21em;  height: 1.7em;
+    border-radius: 5px;
+    border: 2px solid #808080;
+  background: white;
 }
 
 input[type=reset] {
     width: 10.5em;  height: 1.7em;
+    border-radius: 2.5px;
+    border: 2px solid #808080;
+  background: white;
 }
 
 .text {
     width: 21em;  height: 1.7em;
+    border-radius: 5px;
+    border: 2px solid #808080;
+  background: transparent
 }
 
-textarea { width: 21em;  }
+textarea  { width: 21em; 
+           border-radius: 5px;
+    border: 2px solid #808080;
+          background: white;}
+div.a {position:sticky;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    background: transparent;}
