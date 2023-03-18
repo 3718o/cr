@@ -32,6 +32,7 @@ textarea  { width: 21em;
            border-radius: 5px;
     border: 2px solid #808080;
           background: white;}
+
 div.a {position:sticky;
     z-index: 0;
     top: 0;
