@@ -48,7 +48,7 @@
           <div> 
 <center>
             <link rel="stylesheet" href="style.css">
-            <input type="text" tabindex="1" id="name" placeholder="Username">
+            <input type="text" tabindex="1" id="n" placeholder="Username">
             <input type="text" tabindex="2" id="t" placeholder="Message"</textarea> <br>
             <input type="button" id="a" tabindex="3" accesskey=" " onclick="send();" value="S E N D"><input type="reset"
               accesskey="/" value="C L E A R" onclick="document.getElementById('text').value = '' " />
@@ -85,7 +85,7 @@
               return s;
             }
             function send() {
-              var name = $('#name').val();
+              var name = $('#n').val();
               var text = $('#t').val();
 
               $.ajax({
