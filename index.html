@@ -123,12 +123,13 @@
 							var text = $('#t').val();
 
 							document.getElementById("web_chat").scrollTo(0, document.getElementById("web_chat").scrollHeight);
-
+							
 							$.ajax({
 								url: "https://comet-server.com/doc/CppComet/chat-example/chat.php",
 								type: "POST",
 								data: "text=" + encodeURIComponent(text) + "&name=" + " 👤 " + encodeURIComponent(name) + " - " + new Date().toLocaleTimeString()
 							});
+							document.getElementById("t").value = '';
 						}
 					</script>
 					</footer>
