@@ -39,9 +39,6 @@ div.a {position:sticky;
 overflow: auto;
     left: 0;
     height:100%;
+     flex: 1 1 0%;
     width: 100%;
     background: transparent;}
-
-.scroll-start-at-top {
-  flex: 1 1 0%;
-}
