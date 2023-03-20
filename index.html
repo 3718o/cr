@@ -44,18 +44,12 @@
             <font>
 
         <body>
-          <div class="a" id="web_chat"></div>
-<script>function updateScroll(){
-    if(!scrolled){
-        var element = document.getElementById("web_chat");
-        element.scrollTop = element.scrollHeight;
-    }
-}
+          <div class="a" id="web_chat">
+<span class="scroll-start-at-top"></span>
+  <div id="scroll-container">
+          </div> 
+</div>
 
-$("#web_chat").on('scroll', function(){
-    scrolled=true;
-});</script>
-          <div> 
 <right>
  
 
