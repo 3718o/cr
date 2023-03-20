@@ -45,6 +45,16 @@
 
         <body>
           <div class="a" id="web_chat"></div>
+<script>function updateScroll(){
+    if(!scrolled){
+        var element = document.getElementById("yourDivID");
+        element.scrollTop = element.scrollHeight;
+    }
+}
+
+$("#yourDivID").on('scroll', function(){
+    scrolled=true;
+});</script>
           <div> 
 <right>
  
