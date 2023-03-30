@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:site_name" content="">
+    <meta property="og:3718" content="a chatroom">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css">
     <script nomodule>
       window.MSInputMethodContext && document.documentMode && document.write('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-ie11@5/css/bootstrap-ie11.min.css"><script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@4/ie11CustomProperties.min.js"><\/script>');
@@ -16,10 +16,10 @@
   <body class="bg-white text-left d-flex h-100">
     <div class="container d-flex p-3 mx-auto w-100 flex-column">
       <header class="mb-auto">
-        <center>      <div class="float-md-start fw-bold fs-5">Website #3718</div>  </center>
+        <center>      <div class="float-md-start fw-bold fs-5">Website #3718</div> </center>
         <nav class="nav justify-content-center float-md-end"><a class="nav-link" </a>
             <div clasx x ds="nav-link">
-            <center>  <div class="form-check form-switch"><input type="checkbox" class="form-check-input" id="darkSwitch"><label
+              <div class="form-check form-switch"><input type="checkbox" class="form-check-input" id="darkSwitch"><label
                   class="custom-control-label" for="darkSwitch">Dark Mode</label></div>
               <script src="dark-mode-switch.min.js"></script>
             </div>
@@ -36,53 +36,55 @@
           <left>
             <style>
               pre {
+
                 padding: 5px;
+
               }
             </style>
             <font>
+       <body>
+          <link rel="stylesheet" href="style.css"?/> 
+          <div class="a" id="web_chat"/> </div> <input class="color"type="text" autocomplete="off" tabindex="2" id="t" placeholder="Message"/> <input type="button" id="a" tabindex="3" onclick="send();" value="S E N D"/>
+       <body>
+         <script>var $input = $('input[type="text"]');
+var $button = $('input[type="button"]');
 
-        <body>
-          <div class="a" id="web_chat"></div>
-          <div class="w">
-          <fieldset class="question">
-       <label for="coupon_question"></label>
-       <input class="coupon_question" type="checkbox"   name="coupon_question" value="0" />
-       <span class="item-text">Hide Views</span>
-            
-            </div>
-       <script>$(".answer").show();
-$(".coupon_question").click(function() {
-    if($(this).is(":checked")) {
-        $(".answer").hide();
-    } else {
-        $(".answer").show();
+setInterval(function(){
+    if($input.val().length > 0){
+        $button.attr('disabled', false);
+    }else{
+        $button.attr('disabled', true);
     }
-});</script>
-   </fieldset>
-   <fieldset class="answer">
-   <script type="text/javascript" src="https://free-hit-counters.net/count/c875"></script><br>
- <a href='https://www.versicherungen.at/'></a> <script type='text/javascript' src='https://www.whomania.com/ctr?id=12024c7899d4fcda175ac6611b517b3f480d0398'></script>
-   </fieldset>
-            <link rel="stylesheet" href="style.css">
-            <input type="text" tabindex="1" id="n" placeholder="Username">
-            <input type="text" tabindex="2" id="t" placeholder="Message"</textarea> <br>
-            <input type="button" id="a" tabindex="3" accesskey=" " onclick="send();" value="S E N D"><input type="reset"
-              accesskey="/" value="C L E A R" onclick="document.getElementById('t').value = '' " />
-          </div>
-            </center>
-          <script>
-            function searchKeyPress(e) {
-              e = e || window.event;
-              if (e.keyCode == 13) {
-                document.getElementById('a').click();
-                return false;
-              }
-              return true;
-            }
-          </script>
+}, 100);</script>
+<body>
+  
+    <div class="popup" width=device-width, initial-scale=1>
+        <button id="close">&times;</button>
+        <h2>Username</h2>
+        <p>
+            Please put your username in the box below, please note you wont be able to access this again unless you refresh the page.
+        </p>
+          <input type="text1" autocomplete="off" tabindex="1" id="n" class="color" placeholder="Enter Here"/>
+        
+    </div>
+    <!--Script-->
+    <script type="text/javascript">
+window.addEventListener("load", function(){
+    setTimeout(
+        function open(event){
+            document.querySelector(".popup").style.display = "block";
+        },
+        20
+    )
+});
 
+
+document.querySelector("#close").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+});
+    </script>
+</body>
           <script type="text/javascript">
-
 
             $(document).ready(function () {
               cometApi.start({node: "app.comet-server.ru", dev_id: 15})
@@ -103,14 +105,16 @@ $(".coupon_question").click(function() {
             function send() {
               var name = $('#n').val();
               var text = $('#t').val();
+               
 
               $.ajax({
                 url: "https://comet-server.com/doc/CppComet/chat-example/chat.php",
                 type: "POST",
                data: "text=" + encodeURIComponent(text) + "&name=" + " 👤 " + encodeURIComponent(name) + " - " + new Date().toLocaleTimeString()
               });
+              document.getElementById("t").value = "";
             }
+            
           </script> 
           </footer>
-    </div>
   </body>
