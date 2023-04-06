@@ -1,3 +1,9 @@
+body{
+   height: 100%;
+  width: 100%;
+  
+}
+
 a {font-family: Roboto, "Montserrat", Arial;}
 
 input[type=button] {
@@ -30,12 +36,18 @@ input[type=text1] {
   background:#ffffff;
   background:rgba(0,0,0,0.0);
 }
+.color
+{
+    color: #03549a;
+}
 
 div.a {position:sticky;
+       scrollbar-width: none;
     z-index: 0;
-    bottom: 105px;
     left: 0;
     height:100%;
+         overflow: hidden;
+    padding-right: 15px;
     width: 100%;
     background: transparent;}
     	*,
@@ -62,6 +74,7 @@ div.a {position:sticky;
     text-align: center;
 }
 .popup button{
+     align-content:flex;
     display: block;
     margin:  0 0 20px auto;
     background-color: transparent;
@@ -85,4 +98,20 @@ div.a {position:sticky;
     text-align: justify;
     margin: 20px 0;
     line-height: 25px;
+}
+
+.pre {padding: 5px;}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  height: 10px;
 }
