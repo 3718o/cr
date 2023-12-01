@@ -16,7 +16,8 @@ function HtmlEncode(s) {
 }
 
 
-
+console.log(["answer_to_web_MainPageChat", p]);
+        $("#answer_div").html("Delivered "+p.data.number_messages+" recipients of "+ (etime.getTime() - timer.getTime() )+"ms "+p.data.error);
 
 document.body.onkeydown = function(event){
    event = event || window.event;
